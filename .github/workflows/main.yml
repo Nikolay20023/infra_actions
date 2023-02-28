@@ -55,6 +55,7 @@ jobs:
           key: ${{secrets.SSH_KEY}}
           passphrase: ${{secrets.PASSPHRASE}}
           scrips: |
+            # что там делаем
             sudo docker pull nikolay20023/infra_actions:latest
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker run --rm -d -p 5000:5000 nikolay20023/infra_actions:latest
